@@ -32,13 +32,13 @@ public class SearchBlockPage {
                 && returnDateInput.shouldBe(visible).exists();
     }
 
-    @Step("Ввод города отправления: {from}")
+    @Step("Ввод города отправления: ")
     public void enterFrom(String from) {
         fromInput.click();
         fromInput.setValue(from).pressEnter();
     }
 
-    @Step("Ввод города прибытия: {to}")
+    @Step("Ввод города прибытия: ")
     public void enterTo(String to) {
         toInput.setValue(to);
         $x("//div[contains(@class, 'dp-20s1up-root-suggestionName') and text()='" + to + "']").click();
